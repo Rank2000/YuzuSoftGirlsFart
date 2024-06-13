@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+body {
+  background-image: url('../img/background.PNG');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* 返回首页按钮 */
+.btn-back-index {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, orange, pink);
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: rgb(26, 213, 60);
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-back-index:hover{
+  opacity: 0.75;
+}
+/* 放屁文字 */
+.fart-text {
+  position: fixed;
+  z-index: 2;
+  bottom: 25px;
+  left: 125px;
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  color: #906e2b;
+  font-family: "幼圆";
+  /* background-color: white; */
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.fart-text.show {
+  opacity: 1;
+}
+
+/* 喘息按钮 */
+/* 放屁按钮 */
+.btn-fart,
+.btn-breathe {
+  position: fixed;
+  z-index: 1;
+  bottom: 25px;
+  right: 25px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+  color: orange;
+  border-radius: 50%;
+  background-color: rgb(243, 241, 138);
+  border: 1px solid #000;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.btn-fart:hover {
+  color: #906e2b;
+  background-color: #cca556;
+}
+
+.btn-breathe {
+  left: 25px;
+}
+
+.btn-breathe.active {
+  color: #906e2b;
+  background-color: #cca556;
+}
+
+.random-fart.show {
+  bottom: 135px;
+}
+
+.stuffy-fart.show {
+  bottom: 245px;
+}
+
+.small-fart.show {
+  bottom: 355px;
+}
+
+.normal-fart.show {
+  bottom: 465px;
+}
+
+.big-fart.show {
+  bottom: 575px;
+}
+
+.serial-fart.show {
+  bottom: 685px;
+}
+
+.show-all-fart-btn {
+  z-index: 2;
+}
+
+/* 网页头部 */
+/* .header{
+  
+} */
+
+.header .logo {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+
+.header .title {
+  padding-top: 30px;
+}
+
+.header .title h1 {
+  text-align: center;
+  color: rgb(237, 221, 106);
+  font-size: 40px;
+}
+
+/* 网页身体 */
+.body {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.body .story-list {
+  width: 100%;
+  height: 100px;
+  background-color: greenyellow;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.5;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+
+.body .story-list ul {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.body .story-list ul li.girlfart {
+  font-size: 30px;
+  height: 100px;
+  line-height: 100px;
+  color: black;
+  flex: 1;
+  text-align: center;
+  border-radius: 15px;
+  /* background-color: white; */
+  cursor: pointer;
+
+}
+
+.body .story-list ul li:hover {
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.body .story-list ul li.active {
+  background-color: white;
+}
+
+.body .story-content {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 600px;
+  background-color: skyblue;
+  opacity: 0.9;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.body .story-content .cover,
+.body .story-content .cg {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.body .story-content .cg {
+  width: 50%;
+}
+
+.body .story-content .cover img,
+.body .story-content .cg img {
+  width: 100%;
+}
+
+.body .story-content h3 {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+}
+
+.body .story-content p {
+  text-indent: 2em;
+  font-size: 22px;
+}
+
+/* 网页底部 */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: #333;
+}
+
+.footer .text {
+  width: 100%;
+  text-align: center;
+}
+
+.footer .text h4 {
+  line-height: 50px;
+}
+
+/* 媒体查询 */
+@media (max-width:1200px) {
+
+  /* 标题字体 */
+  .header .title h1 {
+    font-size: 36px;
+  }
+
+  /* 导航栏字体 */
+  .body .story-list ul li.girlfart {
+    font-size: 26px;
+  }
+
+  /* logo图标 */
+  .header .logo {
+    left: 20px;
+  }
+
+  /* 女主放屁按钮 */
+  .btn-fart,
+  .btn-breathe {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+  }
+
+  .random-fart.show {
+    bottom: 115px;
+  }
+
+  .stuffy-fart.show {
+    bottom: 205px;
+  }
+
+  .small-fart.show {
+    bottom: 295px;
+  }
+
+  .normal-fart.show {
+    bottom: 385px;
+  }
+
+  .big-fart.show {
+    bottom: 475px;
+  }
+
+  .serial-fart.show {
+    bottom: 565px;
+  }
+
+  /* 放屁文字 */
+  .fart-text {
+    left: 115px;
+    width: 350px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 42px;
+  }
+}
+
+@media (max-width:992px) {
+
+  /* 标题字体 */
+  .header .title h1 {
+    font-size: 30px;
+  }
+
+  /* 导航栏字体 */
+  .body .story-list ul li.girlfart {
+    font-size: 22px;
+  }
+
+  /* logo图标 */
+  .header .logo {
+    left: 15px;
+  }
+
+  /* 女主放屁按钮 */
+  .btn-fart,
+  .btn-breathe {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+  }
+
+  .random-fart.show {
+    bottom: 95px;
+  }
+
+  .stuffy-fart.show {
+    bottom: 165px;
+  }
+
+  .small-fart.show {
+    bottom: 235px;
+  }
+
+  .normal-fart.show {
+    bottom: 305px;
+  }
+
+  .big-fart.show {
+    bottom: 375px;
+  }
+
+  .serial-fart.show {
+    bottom: 445px;
+  }
+
+  /* 放屁文字 */
+  .fart-text {
+    left: 105px;
+    width: 310px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width:768px) {
+
+  /* 返回首页按钮 */
+  .btn-back-index {
+    width: 100px;
+    font-size: 18px;
+  }
+
+  /* 标题字体 */
+  .header .title h1 {
+    font-size: 28px;
+  }
+
+  /* 导航栏字体 */
+  .body .story-list ul li.girlfart {
+    font-size: 18px;
+  }
+
+  /* logo图标 */
+  .header .logo {
+    left: 10px;
+  }
+
+
+  .btn-fart,
+  .btn-breathe {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+  }
+
+  /* 放屁文字 */
+  .fart-text {
+    left: 95px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+  }
+}
