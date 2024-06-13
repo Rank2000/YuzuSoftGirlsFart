@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color:orange;
+}
+
+body {
+  background-image: url('../img/background.PNG');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* 弹框介绍 */
+.model{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  border-radius: 25px;
+  border: 5px solid #ccc;
+  width: 90%;
+  min-height: 95%;
+  max-height: 100%;
+  /* margin-left: -265px;
+      margin-top: -127px; */
+  transform: translate(-50%, -50%);
+}
+.model.hidden {
+  display: none;
+}
+/* 模态框关闭按钮 */
+.model .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 56px;
+  text-align: center;
+  color: #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+  /* background-color: skyblue; */
+}
+
+.model .close:hover{
+  background-color: #999;
+}
+/* 模态框头部 */
+.model .model-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+/* 模态框标题 */
+.model .model-header h1{
+  height: 50px;
+  line-height: 50px;
+}
+/* 模态框头部头像 */
+.model .model-header .avatar{
+  width: 200px;
+  height: 200px;
+  /* background-color: skyblue; */
+  border-radius: 50%;
+  border: 5px solid orange;
+}
+/* 模态框头部图片 */
+.model .model-header .avatar img{
+  width: 100%;
+  border-radius: 50%;
+}
+/* 模态框身体 */
+.model .model-body{
+  flex: 1;
+  padding: 10px;
+  /* background-color: skyblue; */
+}
+
+.model .model-body .introduce{
+  display: flex;
+  /* background-color: pink; */
+}
+.model .model-body .introduce .key{
+  flex: 1;
+}
+.model .model-body .introduce .value{
+  flex: 3;
+}
+.model .model-body .introduce .key p{
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+.model .model-body .introduce .value p{
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+
+/* 返回首页按钮 */
+.btn-back-index {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, orange, pink);
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: rgb(26, 213, 60);
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-back-index:hover {
+  opacity: 0.75;
+}
+
+/* 网页头部 */
+/* .header{
+  
+} */
+
+.header .logo {
+  position: fixed;
+  z-index: -1;
+  top: 25px;
+  left: 25px;
+}
+
+.header .title {
+  padding-top: 30px;
+}
+
+.header .title h1 {
+  text-align: center;
+  color: rgb(237, 221, 106);
+  font-size: 40px;
+}
+
+/* 网页身体 */
+
+.body {
+  width: 100%;
+  padding: 30px 0;
+  /* background-color: pink; */
+}
+
+.body .analyse-nav {
+  width: 100%;
+  height: 100px;
+  background-color: greenyellow;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.5;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+
+.body .analyse-nav ul {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.body .analyse-nav ul li.fart-analyse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 100px;
+  color: black;
+  flex: 1;
+  text-align: center;
+  border-radius: 15px;
+  /* background-color: white; */
+  cursor: pointer;
+
+}
+
+.body .analyse-nav ul li:hover {
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.body .analyse-nav ul li.active {
+  background-color: white;
+}
+
+/* 分析内容 */
+.body .analyse-content {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 600px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* 分析标题 */
+.body .analyse-content .analyse-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  /* background-color: skyblue; */
+}
+
+/* 排名 */
+.body .analyse-content .rank-list {
+  display: flex;
+  width: 100%;
+  background-color: yellow;
+}
+
+.body .analyse-content .rank-list .rank {
+  width: 120px;
+  background-color: green;
+}
+
+.body .analyse-content .rank-list .girls {
+  flex: 1;
+  background-color: aqua;
+}
+
+/* 排名、女主标签 */
+.rank div.rank-title,
+.girls div.girls-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+/* 排名标签 */
+.rank div.rank-title {
+  background-color: yellowgreen;
+}
+
+/* 女主标签 */
+.girls div.girls-title {
+  background-color: orange;
+}
+
+/* 排名条目 */
+.rank-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 120px;
+  color: white;
+  font-size: 22px;
+}
+
+/* 排名颜色 */
+.rank-item:nth-child(2) {
+  background-color: rgb(61, 51, 4);
+}
+
+.rank-item:nth-child(3) {
+  background-color: rgb(69, 39, 7);
+}
+
+.rank-item:nth-child(4) {
+  background-color: rgb(87, 48, 8);
+}
+
+.rank-item:nth-child(5) {
+  background-color: rgb(96, 63, 16);
+}
+
+.rank-item:nth-child(6) {
+  background-color: rgb(108, 84, 18);
+}
+
+.rank-item:nth-child(7) {
+  background-color: rgb(140, 104, 30);
+}
+
+.rank-item:nth-child(8) {
+  background-color: rgb(167, 126, 36);
+}
+
+.rank-item:nth-child(9) {
+  background-color: rgb(221, 181, 58);
+}
+
+.rank-item:nth-child(10) {
+  background-color: rgb(245, 214, 91);
+}
+
+.rank-item:nth-child(11) {
+  background-color: rgb(160, 225, 69);
+}
+
+.rank-item:nth-child(12) {
+  background-color: rgb(87, 238, 74);
+}
+
+/* 单个梯队包含女主的盒子 */
+.girls-rank {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+
+/* 女主头像 */
+.girls-rank div.galgirl {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  /* background-color: skyblue; */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 头像图片 */
+.girls-rank div.galgirl img {
+  width: 90%;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+/* 女主名字 */
+.girls-rank div.galgirl p {
+  display: none;
+  color: orange;
+}
+
+/* 女主名字-鼠标进入显示 */
+.girls-rank div.galgirl p.show {
+  display: inline-block;
+}
+
+.girls-rank div.galgirl div.cover {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(transparent,
+      rgba(0, 0, 0, 0.15));
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* 网页身体-鉴赏部分 */
+.body .analyse-content .all-girls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 500px;
+  /* background-color: skyblue; */
+  margin: 0 auto;
+}
+
+.body .analyse-content .all-girls .galgirl {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  /* background-color: skyblue; */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.body .analyse-content .all-girls .galgirl img {
+  width: 90%;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.body .analyse-content .all-girls .galgirl p {
+  display: none;
+  color: orange;
+}
+
+.body .analyse-content .all-girls .galgirl p.show {
+  display: inline-block;
+}
+
+.body .analyse-content .all-girls .galgirl div.cover {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(transparent,
+      rgba(0, 0, 0, 0.15));
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* 网页底部 */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: #333;
+}
+
+.footer .text {
+  width: 100%;
+  text-align: center;
+}
+
+.footer .text h4 {
+  line-height: 50px;
+}
+
+@media (max-width:1200px) {
+  /* 模态框 */
+  .model .model-body .introduce .key p{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .model .model-body .introduce .value p{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width:992px) {
+  /* 模态框 */
+  .model .model-body .introduce .key p{
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+  .model .model-body .introduce .value p{
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width:768px) {
+
+  /* 返回首页按钮 */
+  .btn-back-index {
+    width: 100px;
+    font-size: 18px;
+  }
+
+  /* 模态框 */
+  .model .model-body .introduce .key p{
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .model .model-body .introduce .value p{
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media (max-width:670px) {
+
+  .rank-item,
+  .body .analyse-content .rank-list .rank {
+    width: 50px;
+  }
+
+  .rank-item,
+  .girls-rank {
+    height: 600px;
+  }
+
+  .model .model-header .avatar{
+    width: 100px;
+    height: 100px;
+    /* background-color: skyblue; */
+  }
+
+  .model .model-body .introduce .key p{
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+  .model .model-body .introduce .value p{
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+
+  .girls-rank div.galgirl {
+    
+    width: 100px;
+    height: 100px;
+    /* background-color: skyblue; */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
