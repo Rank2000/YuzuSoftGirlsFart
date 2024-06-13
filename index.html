@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="images/x-icon" href="./favicon.ico">
+  <title>柚子社女主放屁同人创作站</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('./story/img/background.PNG');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: '幼圆';
+    }
+
+    /* logo */
+    .logo {
+      position: fixed;
+      top: 25px;
+      left: 25px;
+    }
+
+    .title {
+      padding-top: 20px;
+      width: 100%;
+      text-align: center;
+      color: rgb(225, 225, 118);
+      margin-bottom: 50px;
+    }
+
+    .content {
+      width: 90%;
+      height: 800px;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: 10px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .content .welcome {
+      width: 100%;
+      /* height: 400px; */
+      /* background-color: pink; */
+    }
+
+    .content .welcome h1 {
+      height: 100px;
+      /* background-color: blue; */
+    }
+
+    .content .welcome p {
+      height: 50px;
+      color: red;
+      font-weight: 700;
+    }
+
+    .content .welcome h1,
+    .content .welcome p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content .welcome .img {
+      width: 25%;
+      margin: 10px auto;
+    }
+
+    .content .welcome .img img {
+      width: 100%;
+    }
+
+    .content .welcome .text {
+      text-align: center;
+    }
+
+    .content .entry {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 50px;
+      /* background-color: green; */
+    }
+
+    .content .entry div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: 100px;
+      background-color: #ccc;
+      border-radius: 20px;
+      border: 1px solid #000;
+      font-size: 32px;
+      box-shadow: 5px 5px 5px 1px black;
+      cursor: pointer;
+    }
+
+    .footer {
+      width: 100%;
+      height: 100px;
+      background-color: white;
+      color: #333;
+    }
+
+    .footer .text {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer .text h4 {
+      line-height: 50px;
+    }
+
+    @media (max-width:640px) {
+      .content .entry div {
+        line-height: 50px;
+        background-color: #ccc;
+        border-radius: 20px;
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 32px;
+        box-shadow: 5px 5px 5px 1px black;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- logo -->
+  <div class="logo">
+    <a href="https://www.yuzu-soft.com/"><img src="./story/img/logo.png" alt=""></a>
+  </div>
+
+  <div class="title">
+    <h1>柚子社女主放屁同人创作站</h1>
+  </div>
+
+  <div class="content">
+    <!-- 欢迎 -->
+    <div class="welcome">
+      <h1>欢迎来到柚子厨的同人网站</h1>
+      <p>温馨提示：本网站重点创作柚子社女主放屁内容，如对此xp完全不感兴趣请退出，
+        并保证只将此网页分享给感兴趣的柚子厨，谢谢！
+      </p>
+      <div class="img">
+        <img src="98344C3193E18CF20F49704D50ECA72A.jpg" alt="">
+      </div>
+      <div class="text">
+        <b>借一张柚子厨最爱的动作图，Ciallo～(∠・ω< )⌒☆</b>
+      </div>
+    </div>
+
+    <!-- 入口 -->
+    <div class="entry">
+      <div class="btn-story">放屁故事</div>
+      <div class="btn-analyse">放屁鉴赏</div>
+    </div>
+  </div>
+
+  <!-- 网页底部 -->
+  <div class="footer">
+    <div class="text">
+      <h4>此网页所有权归&copy;Rank2000 所有</h4>
+      <p>温馨提示：此为柚子社gal同人二创网页，请不要用内容于盈利等，且尽量只分享给柚子厨</p>
+      <p>希望各位继续支持柚子社,Ciallo～(∠・ω< )⌒☆</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.btn-story').addEventListener('click', function () {
+      location.href = './story/index.html'
+    })
+
+    document.querySelector('.btn-analyse').addEventListener('click', function () {
+      location.href = './analyse/index.html'
+    })
+  </script>
+</body>
+
+</html>
